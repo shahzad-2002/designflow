@@ -6,7 +6,7 @@ A client & design-project management workspace for freelancers, designers,
 signage businesses, and creative studios. Version 1 runs entirely in the
 browser (LocalStorage) — no backend, no paid APIs.
 
-## Status: Step 5 complete ✅
+## Status: Step 6 complete ✅
 
 - Project scaffolded with Vite + React + Tailwind
 - React Router wired up for every planned page
@@ -20,16 +20,18 @@ browser (LocalStorage) — no backend, no paid APIs.
 - **Dynamic Client Brief**: service-specific brief questions + real image upload
 - **Projects page**: create/edit/delete/search/filter, auto-creates default tasks
 - **Project Detail workspace**: Overview, Brief, Tasks, Revisions, Approval
-- **Dashboard**: live stat cards (Active Projects, New Requests, Awaiting
-  Approval, Pending Revisions, Pending Payments, Completed Projects, Total
-  Revenue) computed from real data, a project-status bar chart, upcoming
-  deadlines, recent projects/clients, and pending tasks — nothing here is
-  hard-coded
-- Placeholder pages for Services, Quotes, Invoices, Tasks, Revisions,
-  Reports, Settings
+- **Dashboard**: live stat cards, project-status chart, deadlines, recent
+  activity — all computed from real data
+- **Quotes page**: create/edit/delete quotes with a line-item editor,
+  auto-generated quote numbers, and automatic subtotal/discount/tax/total
+  calculation
+- **Invoices page**: create/edit/delete invoices with the same line-item
+  editor, auto-generated invoice numbers, and automatic total/paid/remaining
+  calculation with a live payment-status badge (Unpaid/Partially Paid/Paid/Overdue)
+- Placeholder pages for Services, Tasks, Revisions, Reports, Settings
 
-Next: the global Tasks and Revisions pages (cross-project views), then Quotes
-and Invoices with automatic total calculations.
+Next: global Tasks and Revisions pages (cross-project views), Reports with
+more charts, and the Notifications system.
 
 ## Run it locally
 
