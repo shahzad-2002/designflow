@@ -6,7 +6,7 @@ A client & design-project management workspace for freelancers, designers,
 signage businesses, and creative studios. Version 1 runs entirely in the
 browser (LocalStorage) — no backend, no paid APIs.
 
-## Status: Step 2 complete ✅
+## Status: Step 3 complete ✅
 
 - Project scaffolded with Vite + React + Tailwind
 - React Router wired up for every planned page
@@ -16,10 +16,14 @@ browser (LocalStorage) — no backend, no paid APIs.
 - Full services catalog (Branding, Social Media, Product/E-commerce, Signage)
 - Realistic demo data (5 clients, 6 projects, tasks, quotes, invoices,
   revisions, notifications) that seeds itself into LocalStorage on first run
-- Placeholder pages for Dashboard, Clients, Projects, Services, Quotes,
-  Invoices, Tasks, Revisions, Reports, Settings
+- **Clients page**: add, edit, delete, and search clients — all real,
+  working, and saved to LocalStorage
+- **Client Profile page**: client details, total paid / pending amounts,
+  and a list of that client's projects
+- Placeholder pages for Dashboard, Projects, Services, Quotes, Invoices,
+  Tasks, Revisions, Reports, Settings
 
-Next: wiring the Clients and Projects pages up to this data (CRUD screens).
+Next: the Projects page (create/edit/delete/search + project detail workspace).
 
 ## Run it locally
 

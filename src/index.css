@@ -33,3 +33,9 @@ h4 {
   outline: 2px solid #b8742a;
   outline-offset: 2px;
 }
+
+@layer components {
+  .input {
+    @apply w-full text-sm border border-border rounded-md px-3 py-2 bg-panel text-ink2 outline-none focus:border-ochre transition-colors;
+  }
+}
