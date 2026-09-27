@@ -6,7 +6,7 @@ A client & design-project management workspace for freelancers, designers,
 signage businesses, and creative studios. Version 1 runs entirely in the
 browser (LocalStorage) — no backend, no paid APIs.
 
-## Status: Step 3 complete ✅
+## Status: Step 4 complete ✅
 
 - Project scaffolded with Vite + React + Tailwind
 - React Router wired up for every planned page
@@ -16,14 +16,22 @@ browser (LocalStorage) — no backend, no paid APIs.
 - Full services catalog (Branding, Social Media, Product/E-commerce, Signage)
 - Realistic demo data (5 clients, 6 projects, tasks, quotes, invoices,
   revisions, notifications) that seeds itself into LocalStorage on first run
-- **Clients page**: add, edit, delete, and search clients — all real,
-  working, and saved to LocalStorage
-- **Client Profile page**: client details, total paid / pending amounts,
-  and a list of that client's projects
-- Placeholder pages for Dashboard, Projects, Services, Quotes, Invoices,
-  Tasks, Revisions, Reports, Settings
+- **Clients page**: add, edit, delete, and search clients
+- **Client Profile page**: details, total paid/pending, their projects
+- **Dynamic Client Brief**: selecting a service shows the right brief
+  questions automatically (signage, logo, branding, social media, product)
+  — including a real working image upload stored in LocalStorage
+- **Projects page**: create/edit/delete/search/filter projects. Creating a
+  project automatically generates its default task checklist
+- **Project Detail workspace**: Overview, Brief, Tasks (add/change
+  status/delete), Revisions (request/track, auto-creates a task and moves
+  the project to "Revision Requested"), and Approval (Approve Design /
+  Request Revision buttons that actually change project status)
+- Placeholder pages for Dashboard, Services, Quotes, Invoices, Tasks,
+  Revisions, Reports, Settings
 
-Next: the Projects page (create/edit/delete/search + project detail workspace).
+Next: the global Dashboard with live stats, and the global Tasks/Revisions
+pages that show items across all projects.
 
 ## Run it locally
 
