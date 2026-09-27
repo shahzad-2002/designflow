@@ -6,7 +6,7 @@ A client & design-project management workspace for freelancers, designers,
 signage businesses, and creative studios. Version 1 runs entirely in the
 browser (LocalStorage) — no backend, no paid APIs.
 
-## Status: Step 4 complete ✅
+## Status: Step 5 complete ✅
 
 - Project scaffolded with Vite + React + Tailwind
 - React Router wired up for every planned page
@@ -14,24 +14,22 @@ browser (LocalStorage) — no backend, no paid APIs.
 - LocalStorage utility functions (`saveData`, `getData`, `updateData`,
   `deleteData`, `addData`, `findById`)
 - Full services catalog (Branding, Social Media, Product/E-commerce, Signage)
-- Realistic demo data (5 clients, 6 projects, tasks, quotes, invoices,
-  revisions, notifications) that seeds itself into LocalStorage on first run
+- Realistic demo data that seeds itself into LocalStorage on first run
 - **Clients page**: add, edit, delete, and search clients
 - **Client Profile page**: details, total paid/pending, their projects
-- **Dynamic Client Brief**: selecting a service shows the right brief
-  questions automatically (signage, logo, branding, social media, product)
-  — including a real working image upload stored in LocalStorage
-- **Projects page**: create/edit/delete/search/filter projects. Creating a
-  project automatically generates its default task checklist
-- **Project Detail workspace**: Overview, Brief, Tasks (add/change
-  status/delete), Revisions (request/track, auto-creates a task and moves
-  the project to "Revision Requested"), and Approval (Approve Design /
-  Request Revision buttons that actually change project status)
-- Placeholder pages for Dashboard, Services, Quotes, Invoices, Tasks,
-  Revisions, Reports, Settings
+- **Dynamic Client Brief**: service-specific brief questions + real image upload
+- **Projects page**: create/edit/delete/search/filter, auto-creates default tasks
+- **Project Detail workspace**: Overview, Brief, Tasks, Revisions, Approval
+- **Dashboard**: live stat cards (Active Projects, New Requests, Awaiting
+  Approval, Pending Revisions, Pending Payments, Completed Projects, Total
+  Revenue) computed from real data, a project-status bar chart, upcoming
+  deadlines, recent projects/clients, and pending tasks — nothing here is
+  hard-coded
+- Placeholder pages for Services, Quotes, Invoices, Tasks, Revisions,
+  Reports, Settings
 
-Next: the global Dashboard with live stats, and the global Tasks/Revisions
-pages that show items across all projects.
+Next: the global Tasks and Revisions pages (cross-project views), then Quotes
+and Invoices with automatic total calculations.
 
 ## Run it locally
 
