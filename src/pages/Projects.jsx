@@ -1,5 +1,5 @@
-import { useState, useMemo } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState, useMemo, useEffect } from "react";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { Plus, Search, Pencil, Trash2, Eye } from "lucide-react";
 import DashboardLayout from "../components/layout/DashboardLayout.jsx";
 import Modal from "../components/ui/Modal.jsx";
@@ -15,6 +15,7 @@ import {
   deleteData,
   makeId,
 } from "../utils/storage.js";
+import { addNotification } from "../utils/notifications.js";
 import { SERVICE_CATEGORIES, getServiceById } from "../data/servicesData.js";
 import { PROJECT_STATUSES, DEFAULT_PROJECT_TASKS } from "../data/constants.js";
 
@@ -31,10 +32,11 @@ const EMPTY_FORM = {
 
 export default function Projects() {
   const navigate = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
   const [projects, setProjects] = useState(() => getData(STORAGE_KEYS.PROJECTS, []));
   const [clients] = useState(() => getData(STORAGE_KEYS.CLIENTS, []));
 
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState(searchParams.get("q") || "");
   const [statusFilter, setStatusFilter] = useState("All");
 
   const [modalOpen, setModalOpen] = useState(false);
@@ -56,6 +58,13 @@ export default function Projects() {
       return matchesSearch && matchesStatus;
     });
   }, [projects, search, statusFilter, clients]);
+
+  useEffect(() => {
+    if (searchParams.get("new")) {
+      openAddModal();
+      setSearchParams({});
+    }
+  }, []);
 
   function openAddModal() {
     setEditingId(null);
@@ -92,6 +101,7 @@ export default function Projects() {
       const record = { id: makeId("proj"), ...form };
       const next = addData(STORAGE_KEYS.PROJECTS, record);
       setProjects(next);
+      addNotification(`New project created: ${record.name}`);
 
       // Automation: creating a new project auto-creates its default task checklist.
       const existingTasks = getData(STORAGE_KEYS.TASKS, []);

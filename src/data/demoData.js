@@ -286,6 +286,5 @@ export const demoRevisions = [
 export const demoNotifications = [
   { id: "notif_1", message: "New project created: CartExpress Product Banners", date: "2026-09-26", read: false },
   { id: "notif_2", message: "Revision requested on GlowMart Instagram Campaign", date: "2026-09-27", read: false },
-  { id: "notif_3", message: "Invoice INV-2002 is overdue", date: "2026-09-16", read: false },
   { id: "notif_4", message: "Client approved: BrightSign Storefront Concept", date: "2026-09-18", read: true },
 ];

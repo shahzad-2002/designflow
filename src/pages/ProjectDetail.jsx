@@ -21,6 +21,7 @@ import {
   updateData,
   makeId,
 } from "../utils/storage.js";
+import { addNotification } from "../utils/notifications.js";
 import { getServiceById } from "../data/servicesData.js";
 import { TASK_STATUSES, REVISION_STATUSES } from "../data/constants.js";
 import { getBriefFieldsForService } from "../data/briefFields.js";
@@ -132,6 +133,7 @@ export default function ProjectDetail() {
     setTasks(nextTasks.filter((t) => t.projectId === project.id));
 
     setProjectStatus("Revision Requested");
+    addNotification(`Revision requested on ${project.name}`);
     setNewRevisionComment("");
     setRevisionModalOpen(false);
   }
@@ -145,6 +147,7 @@ export default function ProjectDetail() {
 
   function handleApprove() {
     setProjectStatus("Approved");
+    addNotification(`Client approved the design: ${project.name}`);
     setApprovalMessage("Design approved. Project status updated to Approved.");
   }
 

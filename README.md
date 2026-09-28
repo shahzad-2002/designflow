@@ -6,7 +6,7 @@ A client & design-project management workspace for freelancers, designers,
 signage businesses, and creative studios. Version 1 runs entirely in the
 browser (LocalStorage) — no backend, no paid APIs.
 
-## Status: Step 6 complete ✅
+## Status: Step 7 complete ✅
 
 - Project scaffolded with Vite + React + Tailwind
 - React Router wired up for every planned page
@@ -28,10 +28,19 @@ browser (LocalStorage) — no backend, no paid APIs.
 - **Invoices page**: create/edit/delete invoices with the same line-item
   editor, auto-generated invoice numbers, and automatic total/paid/remaining
   calculation with a live payment-status badge (Unpaid/Partially Paid/Paid/Overdue)
-- Placeholder pages for Services, Tasks, Revisions, Reports, Settings
+- **Tasks page**: all tasks across every project, with search, status
+  filter, inline status change, delete, and add-task
+- **Revisions page**: all revisions across every project with filters and
+  inline status change
+- **Notifications**: bell dropdown with unread count and mark-as-read.
+  Created automatically when a project is created, a revision is requested,
+  a design is approved, an invoice becomes overdue, or a deadline is within
+  3 days
+- Topbar "New Project" button and search box now work (open the new-project
+  form / search projects)
+- Placeholder pages for Services, Reports, Settings
 
-Next: global Tasks and Revisions pages (cross-project views), Reports with
-more charts, and the Notifications system.
+Next: Services page, Reports with charts, Settings, then polish and deployment.
 
 ## Run it locally
 
