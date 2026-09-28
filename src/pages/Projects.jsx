@@ -62,6 +62,8 @@ export default function Projects() {
   useEffect(() => {
     if (searchParams.get("new")) {
       openAddModal();
+      const svc = searchParams.get("service");
+      if (svc) setForm((f) => ({ ...f, serviceId: svc, brief: {} }));
       setSearchParams({});
     }
   }, []);

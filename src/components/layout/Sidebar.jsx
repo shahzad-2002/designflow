@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { STORAGE_KEYS, getData } from "../../utils/storage.js";
 import {
   LayoutDashboard,
   Users,
@@ -48,7 +49,7 @@ export default function Sidebar({ open, onClose }) {
               Design<span className="text-ochre">Flow</span>
             </p>
             <p className="text-[11px] text-white/40 mt-1">
-              brief to approval, one place
+              {getData(STORAGE_KEYS.SETTINGS, {}).businessName || "brief to approval, one place"}
             </p>
           </div>
           <button className="lg:hidden text-white/60" onClick={onClose}>

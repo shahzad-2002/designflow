@@ -6,7 +6,7 @@ A client & design-project management workspace for freelancers, designers,
 signage businesses, and creative studios. Version 1 runs entirely in the
 browser (LocalStorage) — no backend, no paid APIs.
 
-## Status: Step 7 complete ✅
+## Status: Step 8 complete ✅
 
 - Project scaffolded with Vite + React + Tailwind
 - React Router wired up for every planned page
@@ -38,9 +38,15 @@ browser (LocalStorage) — no backend, no paid APIs.
   3 days
 - Topbar "New Project" button and search box now work (open the new-project
   form / search projects)
-- Placeholder pages for Services, Reports, Settings
+- **Services page**: all services by category with project counts and a
+  "Start project" button that opens the new-project form with that service
+  already selected
+- **Reports page**: totals, most requested service, and charts for revenue
+  per month, completed projects per month, and status distribution
+- **Settings page**: business name/email (shown in the sidebar), reset to demo
+  data, and clear all data
 
-Next: Services page, Reports with charts, Settings, then polish and deployment.
+Next: automation rules review, polish, testing, and deployment.
 
 ## Run it locally
 
